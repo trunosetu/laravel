@@ -11,16 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('devices', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama_device');
-            // $table->integer('nilai_min');
-            // $table->integer('nilai_max');
-            // $table->integer('nilai');
+        Schema::create('log', function (Blueprint $table) {
             $table->timestamps();
         });
-        
-
     }
 
     /**
@@ -28,6 +21,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('devices');
+        Schema::dropIfExists('log');
     }
 };
